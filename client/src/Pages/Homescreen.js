@@ -1,6 +1,7 @@
 import React from 'react'
 import './Homepage.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import ImageSlideshow from '../Components/ImageSlideshow';
 import { IoMenuSharp } from "react-icons/io5";
 import { FaRegCopyright,FaCheck } from "react-icons/fa";
 import timerimage from '../Images/hector-achautla-njZb59XQWqM-unsplash.jpg'
@@ -10,9 +11,20 @@ import platform from '../Images/Davis Ikou portfolio - Google Chrome 13_02_2024 
 import consultation from '../Images/christina-wocintechchat-com-vzfgh3RAPzM-unsplash.jpg'
 import machines from '../Images/lee-campbell-DtDlVpy-vvQ-unsplash.jpg'
 import happywoman from '../Images/pexels-wundef-4212959.jpg'
+import AutoplayVideo from '../Components/Autoplayvideo';
+import AnimatedCounter from '../Components/Animatedcounter';
 
+
+const images = [
+  portfolioDesign,
+  platform,
+  consultation,
+  happywoman,
+  machines,
+];
 
 function Homescreen() {
+  
   return (
     <div className='overall-homepage-container'>
       {/* <div className='homapage-top-contact-section'>
@@ -41,8 +53,14 @@ function Homescreen() {
       </div>
       <div className='homepage-body-section'>
         <div className='homepage-intro-section-imaged'>
-        <img className='intro-homepage-image' src={timerimage} alt='image of a watch'/>
-         <div className='on-image-content'>
+         
+       <img className='intro-homepage-image' src={timerimage}/>
+       <div className='actual-home-slide'>
+{/* <ImageSlideshow className='intro-homepage-image-slideshow' images={images} /> */}
+       </div>
+        
+        
+         <div className='on-image-content'> <img className='intro-homepage-image' src={timerimage} alt='image of a watch'/>
         <div className='top-vertical-bar'></div>
         <div className='homepage-intro-section'>
           <p className='fs-1 text-light'>Crafting Innovative Web Solutions</p>
@@ -68,23 +86,23 @@ function Homescreen() {
       </div>
       <div className='homepage-statistics'>
         <div className='statistic-card'>
-          <h2 style={{fontSize:'40px',textAlign:'center'}}>32<span className='text-danger'>+</span></h2>
+          <h2 style={{fontSize:'40px',textAlign:'center'}}><AnimatedCounter value={35}/><span className='text-danger'>+</span></h2>
           <p style={{fontWeight:'bold'}} className='fs-3'>Proffesionals Team</p>
         </div>
         <div className='statistic-card'>
-          <h2 style={{fontSize:'40px',textAlign:'center'}}>200<span className='text-danger'>+</span></h2>
+          <h2 style={{fontSize:'40px',textAlign:'center'}}><AnimatedCounter value={200}/><span className='text-danger'>+</span></h2>
           <p style={{fontWeight:'bold'}} className='fs-3'>Satisfied customers</p>
         </div>
         <div className='statistic-card'>
-          <h2 style={{fontSize:'40px',textAlign:'center'}}>175<span className='text-danger'>+</span></h2>
+          <h2 style={{fontSize:'40px',textAlign:'center'}}><AnimatedCounter value={175}/><span className='text-danger'>+</span></h2>
           <p style={{fontWeight:'bold'}} className='fs-3'>Successful projects</p>
         </div>
         <div className='statistic-card'>
-          <h2 style={{fontSize:'40px',textAlign:'center'}}>8<span className='text-danger'>+</span></h2>
+          <h2 style={{fontSize:'40px',textAlign:'center'}}><AnimatedCounter value={8}/><span className='text-danger'>+</span></h2>
           <p style={{fontWeight:'bold'}} className='fs-3'>Years of experience</p>
         </div>
         <div className='statistic-card'>
-          <h2 style={{fontSize:'40px',textAlign:'center'}}>32<span className='text-danger'>+</span></h2>
+          <h2 style={{fontSize:'40px',textAlign:'center'}}><AnimatedCounter value={32}/><span className='text-danger'>+</span></h2>
           <p style={{fontWeight:'bold'}} className='fs-3'>Proffesionals Team</p>
         </div>
       </div>
