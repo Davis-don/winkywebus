@@ -1,9 +1,11 @@
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {/* Extra small devices (phones, less than 576px) */
 .overall-footer-component{
 padding: 20px;
 }
 .contact-us-section{
-width: 90vw;
-margin: auto;
+
+padding: 20px;
 }
 .top-contact-us-section{
 
@@ -38,3 +40,95 @@ margin: auto;
     flex-direction: column;
     gap:20px
 }
+}
+ /* Small devices (landscape phones, 576px and up) */
+ @media (min-width: 576px) and (max-width: 767.98px) {
+    .overall-footer-component{
+        padding: 20px;
+        }
+        .contact-us-section{
+        
+        padding: 20px;
+        }
+        .top-contact-us-section{
+        
+        }
+        .overall-icons-containers-contact{
+        /* display: flex;
+        flex-direction: row;
+        gap:20px;
+        width: max-content;
+        margin: auto; */
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+        gap:10px;
+        }
+        
+        .actual-icon{
+        width: max-content;
+        height: max-content;
+        padding: 15px;
+        }
+        .contact-info-container{
+        line-height: 15px;
+        color: white;
+        font-size: small;
+        }
+        .submit-btn-holder{
+        width: max-content;
+        margin: auto;
+        }
+        .contact-form{
+            display: flex;
+            flex-direction: column;
+            gap:20px
+        } 
+ }
+ /* Extra extra large devices (larger desktops, 767.99px and up) */
+ @media (min-width: 767.99px) {
+    /* CSS rules for extra extra large devices */
+    .overall-footer-component{
+        padding: 20px;
+        }
+        .contact-us-section{
+        
+        padding: 20px;
+        }
+        .top-contact-us-section{
+        
+        }
+        .overall-icons-containers-contact{
+        /* display: flex;
+        flex-direction: row;
+        gap:20px;
+        width: max-content;
+        margin: auto; */
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+        gap:10px;
+        }
+        
+        .actual-icon{
+        width: max-content;
+        height: max-content;
+        padding: 15px;
+        }
+        .contact-info-container{
+        line-height: 15px;
+        color: white;
+        font-size: small;
+        }
+        .bottom-contact-us-section{
+     width: 600px;
+     margin: auto;
+        }
+        .submit-btn-holder{
+        width: max-content;
+        margin: auto;
+        }
+        .contact-form{
+            display: flex;
+            flex-direction: column;
+            gap:20px
+        } 
+ }

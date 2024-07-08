@@ -10,3 +10,29 @@ height: 100%;
 object-fit: cover;
 }
 }
+ /* Small devices (landscape phones, 576px and up) */
+ @media (min-width: 576px) and (max-width: 767.98px) {
+    .autoplay-component{
+        width: 100vw;
+        height: 80vh;
+        }
+        .autoplay-video-actual{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }
+ }
+  /* Extra extra large devices (larger desktops, 767.99px and up) */
+  @media (min-width: 767.99px) {
+    /* CSS rules for extra extra large devices */
+    .autoplay-component{
+        width: 100vw;
+        height: 80vh;
+        }
+        .autoplay-video-actual{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }
+
+  }

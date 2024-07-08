@@ -1,5 +1,5 @@
 /* Extra small devices (phones, less than 576px) */
-@media (max-width: 575.98px) {
+@media (max-width: 575.98px) {/* Extra small devices (phones, less than 576px) */
    .overall-homepage-container{
 
    }
@@ -188,33 +188,404 @@ gap: 20px;
 .homepage-footer-section{
   background-color:black
 }
-.contact-section-homepage-footer{
 
-}
-.contact-homepage-image-footer{
-  width: 100%;
-  height: 350px;
-  
-  padding: 20px;
-}
-.contact-footer-diagram{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.contact-form-homepage{
-
-}
-.copyright-div{
-  background-color: rgb(36, 36, 53);
-  width: 100%;
-  height: max-content;
-}
   }
   
   /* Small devices (landscape phones, 576px and up) */
   @media (min-width: 576px) and (max-width: 767.98px) {
+    .overall-homepage-container{
+
+    }
+    .homapage-top-contact-section{
+     background-color: rgb(43, 43, 43);
+     width: 100vw;
+     padding: 20px;
+     height: 150px;
     
+    }
+    .top-nav-section{
+   background-color: black;
+   height: 150px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   padding: 20px;
+   border-bottom: 2px solid rgb(50, 50, 50);
+    }
+    .WB-brand{
+   border-right: 2px solid white;
+   padding: 5px;
+    }
+    .wb-brand-name{
+    margin-top: 10px;
+    height: max-content;
+    line-height: 5px;
+    
+    }
+    .nav-left-section{
+   /* display: flex;
+   flex-direction: row;
+   gap:5px */
+   width: max-content;
+   margin: auto;
+    }
+ 
+ 
+ /*body section*/
+ .homepage-body-section{
+ 
+ }
+ .homepage-intro-section-imaged{
+   margin-top: 20px;
+   width: 100vw;
+   height:80vh;
+   position: relative;
+   background-color: green;
+ }
+ .homepage-video-homescreen{
+ position: absolute;
+ z-index: +1;
+ width: max-content;
+ height: max-content;
+ }
+ .on-vid-content{
+   position: absolute;
+   z-index: +2;
+   top:0px;
+   width: 50vw;
+   height: max-content;
+   padding: 30px;
+ }
+ .describe-text{
+ font-size: 40px;
+ line-height: 60px;
+ font-weight: bold;
+ }
+ 
+ /* .homepaged-intro-v{
+ position: absolute;
+ z-index: +1;
+ width: 100%;
+ height: 100%;
+ background-color: green;
+ } */
+ /* .intro-homepage-video{
+   width: 100%;
+   height: 20px;
+   object-fit: cover;
+ } */
+ .on-image-content{
+   position: absolute;
+   z-index: +2;
+   top:0px;
+   width: 100vw;
+   height: max-content;
+   padding: 10px;
+ }
+ .top-vertical-bar{
+ height: 100px;
+ border-left: 4px solid red;
+ margin-top: 40px;
+ }
+ .readmore-btn-holder{
+ margin-top: 30px;
+ margin-left: 25px;
+ }
+ .readmore-btn-holder button{
+   width: 35%;
+ }
+ .homepage-body-section{
+ background-color: white;
+ }
+ .homepage-content-section{
+ width: 100vw;
+ height: max-content;
+ padding: 20px;
+ background-color: white;
+ }
+ .actual-homepage-content-section{
+ margin-top: 50px;
+ padding: 20px;
+ }
+ .signature-holder{
+ display: flex;
+ gap:20px;
+ padding: 20px;
+ }
+ .signature-image-container{
+ width:200px;
+ height: 100px;
+ margin-left: 40px;
+ }
+ .signature-image-container img{
+ width: 100%;
+ object-fit: cover;
+ 
+ }
+ .homepage-content-section{
+   background-color: black;
+ }
+ .homepage-statistics{
+   width: 100vw;
+   background-color: black;
+ }
+ .statistic-card{
+ margin: auto;
+ width: max-content;
+ height: max-content;
+ }
+ .homepage-project-samples{
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+ padding: 10px;
+ 
+ }
+ .image-project-card{
+ width: 100%;
+ height: 400px;
+ background-color: rgb(49, 49, 49);
+ border-radius: 20px;
+ }
+ .task-display{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+ }
+ 
+ .website-design-packages{
+ margin-top: 30px;
+ background-color: black;
+ }
+ .overall-design-packages-card{
+ padding: 10px;
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+ 
+ }
+ .landing-page-card{
+ width:400px;
+ margin: auto;
+ height: max-content;
+ background-color: rgb(243, 243, 243);
+ padding: 10px;
+ }
+ .services-li{
+   display: flex;
+   flex-direction: column;
+   gap:20px
+ }
+ .services-li li{
+ display: flex;
+ flex-direction: row;
+ gap: 20px;
+ }
+ /*footer section*/
+ .homepage-footer-section{
+   background-color:black
+ }
+  }
+  /* Extra extra large devices (larger desktops, 767.99px and up) */
+  @media (min-width: 767.99px) {
+    /* CSS rules for extra extra large devices */
+    .overall-homepage-container{
+
+    }
+    .homapage-top-contact-section{
+     background-color: rgb(43, 43, 43);
+     width: 100vw;
+     padding: 20px;
+     height: 150px;
+    
+    }
+    .top-nav-section{
+   background-color: black;
+   height: 150px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   padding: 20px;
+   border-bottom: 2px solid rgb(50, 50, 50);
+    }
+    .WB-brand{
+   border-right: 2px solid white;
+   padding: 5px;
+    }
+    .wb-brand-name{
+    margin-top: 10px;
+    height: max-content;
+    line-height: 5px;
+    
+    }
+    .nav-left-section{
+   /* display: flex;
+   flex-direction: row;
+   gap:5px */
+   width: max-content;
+   margin: auto;
+    }
+ 
+ 
+ /*body section*/
+ .homepage-body-section{
+ 
+ }
+ .homepage-intro-section-imaged{
+   margin-top: 20px;
+   width: 100vw;
+   height:80vh;
+   position: relative;
+   background-color: green;
+ }
+ .homepage-video-homescreen{
+ position: absolute;
+ z-index: +1;
+ width: max-content;
+ height: max-content;
+ }
+ .on-vid-content{
+   position: absolute;
+   z-index: +2;
+   top:0px;
+   width: 50vw;
+   height: max-content;
+   padding: 30px;
+ }
+ .describe-text{
+ font-size: 40px;
+ line-height: 60px;
+ font-weight: bold;
+ }
+ 
+ /* .homepaged-intro-v{
+ position: absolute;
+ z-index: +1;
+ width: 100%;
+ height: 100%;
+ background-color: green;
+ } */
+ /* .intro-homepage-video{
+   width: 100%;
+   height: 20px;
+   object-fit: cover;
+ } */
+ .on-image-content{
+   position: absolute;
+   z-index: +2;
+   top:0px;
+   width: 100vw;
+   height: max-content;
+   padding: 10px;
+ }
+ .top-vertical-bar{
+ height: 100px;
+ border-left: 4px solid red;
+ margin-top: 40px;
+ }
+ .readmore-btn-holder{
+ margin-top: 30px;
+ margin-left: 25px;
+ }
+ .readmore-btn-holder button{
+   width: 35%;
+ }
+ .homepage-body-section{
+ background-color: white;
+ }
+ .homepage-content-section{
+ width: 100vw;
+ height: max-content;
+ padding: 20px;
+ background-color: white;
+ }
+ .actual-homepage-content-section{
+ margin-top: 50px;
+ padding: 20px;
+ }
+ .signature-holder{
+ display: flex;
+ gap:20px;
+ padding: 20px;
+ }
+ .signature-image-container{
+ width:200px;
+ height: 100px;
+ margin-left: 40px;
+ }
+ .signature-image-container img{
+ width: 100%;
+ object-fit: cover;
+ 
+ }
+ .homepage-content-section{
+   background-color: black;
+ }
+ .homepage-statistics{
+   width: 100vw;
+   background-color: black;
+ }
+ .statistic-card{
+ margin: auto;
+ width: max-content;
+ height: max-content;
+ }
+ .homepage-project-samples{
+ /* display: flex;
+ flex-direction: column;
+ gap: 10px;
+ padding: 10px; */
+ display: grid;
+ grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+ gap:20px;
+ 
+ }
+ .image-project-card{
+ width: 100%;
+ height: 400px;
+ background-color: rgb(49, 49, 49);
+ border-radius: 20px;
+ }
+ .task-display{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+ }
+ 
+ .website-design-packages{
+ margin-top: 30px;
+ background-color: black;
+ }
+ .overall-design-packages-card{
+ /* padding: 10px;
+ display: flex;
+ flex-direction: column;
+ gap: 20px; */
+ display: grid;
+ grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+ gap:20px;
+ }
+ .landing-page-card{
+ margin: auto;
+ height: max-content;
+ background-color: rgb(243, 243, 243);
+ padding: 10px;
+ }
+ .services-li{
+   display: flex;
+   flex-direction: column;
+   gap:20px
+ }
+ .services-li li{
+ display: flex;
+ flex-direction: row;
+ gap: 20px;
+ }
+ /*footer section*/
+ .homepage-footer-section{
+   background-color:black
+ }
+   
   }
   
   /* Medium devices (tablets, 768px and up) */

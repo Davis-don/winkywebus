@@ -112,7 +112,7 @@ function Homescreen() {
       <p className='text-light' style={{textAlign:'center',margin:'20px',fontSize:'20px'}}>We offer a few standard packages as well as custom projects.Our web design company specialises in 
         the proffessional creation of unique sites.
       </p>
-      <div className='overall-design-packages-card card'>
+      <div className='overall-design-packages-card'>
       <div className='landing-page-card'>
         <h3 style={{textAlign:'center'}}>Landing page</h3>
         <p style={{fontSize:'20px,',textAlign:'center'}}>KSH 10,000-20,000</p>
