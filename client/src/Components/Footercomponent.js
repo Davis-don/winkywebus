@@ -21,31 +21,61 @@ function Footercomponent() {
     });
     console.log(formData);
   };
-  let handlepost = async (e)=>{
+
+
+  let handlePost = async (e) => {
     e.preventDefault();
-try{
-  const response= await fetch (' https://project-awesome.vercel.app',{
+
+    try {
+        const response = await fetch('https://project-awesome.vercel.app', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData), // Replace formData with your actual data
+        });
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        const data = await response.json();
+        console.log('Request successful:', data);
+        // Further actions with data if needed
+
+    } catch (error) {
+        console.error('Error:', error);
+        // Handle specific errors or conditions here
+    }
+};
+
+//   let handlepost = async (e)=>{
+//     e.preventDefault();
+// try{
+//   const response= await fetch (' https://project-awesome.vercel.app',{
    
-method:'post',
-headers:{
-    "content-type":'application/json'
-},
-body:JSON.stringify(formData)
-})
-if(response){
-const data=await response.json();
-console.log('success')
-}
-else{
-const errordata=await response.json();
-//console.log(errordata)
-console.log('failed')
-}
-}
-catch (error){
-console.log(error)
-}
-}
+// method:'post',
+// headers:{
+//     "content-type":'application/json'
+// },
+// body:JSON.stringify(formData)
+// })
+// if(response){
+// const data=await response.json();
+// console.log('success')
+// }
+// else{
+// const errordata=await response.json();
+// //console.log(errordata)
+// console.log('failed')
+// }
+// }
+// catch (error){
+// console.log(error)
+// }
+// }
+
+
   return (
     <div className='overall-footer-component'>
        <div className='contact-us-section'>
