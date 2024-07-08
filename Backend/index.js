@@ -8,12 +8,9 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 
-// app.use(cors({
-//     origin: 'http://localhost:3000'
-//   }));
 
 const corsOptions = {
-     origin: 'https://project-awesome.vercel.app', // Replace with your allowed origin or use a function for dynamic configuration
+     origin: ' https://winkywebus-server.vercel.app', // Replace with your allowed origin or use a function for dynamic configuration
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true, // Enable credentials (cookies, HTTP authentication) across domains
     optionsSuccessStatus: 204, // Set the response status for successful preflight requests
