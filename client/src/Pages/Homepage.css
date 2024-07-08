@@ -126,8 +126,12 @@ width: 100%;
 object-fit: cover;
 
 }
+.homepage-content-section{
+  background-color: black;
+}
 .homepage-statistics{
   width: 100vw;
+  background-color: black;
 }
 .statistic-card{
 margin: auto;
@@ -155,6 +159,7 @@ border-radius: 20px;
 
 .website-design-packages{
 margin-top: 30px;
+background-color: black;
 }
 .overall-design-packages-card{
 padding: 10px;

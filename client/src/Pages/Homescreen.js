@@ -58,38 +58,38 @@ function Homescreen() {
       </div>
       <div className='homepage-content-section'>
            <div className='actual-homepage-content-section'>
-            <h2 className='text-dark'>Web Design Company You Can <span className='text-danger'>Trust</span></h2>
-            <p className='text-dark'>Our web design and development services blend creativity with cutting-edge technology to build visually stunning and highly functional websites. We prioritize user experience and responsive design to ensure your site looks great and performs flawlessly on any device</p>
+            <h2 className='text-light'>Web Design Company You Can <span className='text-danger'>Trust</span></h2>
+            <p className='text-light'>Our web design and development services blend creativity with cutting-edge technology to build visually stunning and highly functional websites. We prioritize user experience and responsive design to ensure your site looks great and performs flawlessly on any device</p>
            </div>
            <div className='signature-holder container-fluid'>
-            <div className='signature-image-container'>
+            <div className='signature-image-container bg-light'>
               <img src={signature}alt='signature image'/>
             </div>
             <div>
-              <p><span style={{fontWeight:'bold'}}>Davis Ikou</span> Executive Director</p>
+              <p className='text-light'><span style={{fontWeight:'bold'}}>Davis Ikou</span> Executive Director</p>
             </div>
            </div>
       </div>
-      <div className='homepage-statistics'>
+      <div className='homepage-statistics '>
         <div className='statistic-card'>
-          <h2 style={{fontSize:'40px',textAlign:'center'}}><AnimatedCounter value={35}/><span className='text-danger'>+</span></h2>
-          <p style={{fontWeight:'bold'}} className='fs-3'>Proffesionals Team</p>
+          <h2 className='text-light' style={{fontSize:'40px',textAlign:'center'}}><AnimatedCounter value={35}/><span className='text-danger'>+</span></h2>
+          <p style={{fontWeight:'bold'}} className='fs-3 text-light'>Proffesionals Team</p>
         </div>
         <div className='statistic-card'>
-          <h2 style={{fontSize:'40px',textAlign:'center'}}><AnimatedCounter value={200}/><span className='text-danger'>+</span></h2>
-          <p style={{fontWeight:'bold'}} className='fs-3'>Satisfied customers</p>
+          <h2 className='text-light' style={{fontSize:'40px',textAlign:'center'}}><AnimatedCounter value={200}/><span className='text-danger'>+</span></h2>
+          <p style={{fontWeight:'bold'}} className='fs-3 text-light'>Satisfied customers</p>
         </div>
         <div className='statistic-card'>
-          <h2 style={{fontSize:'40px',textAlign:'center'}}><AnimatedCounter value={175}/><span className='text-danger'>+</span></h2>
-          <p style={{fontWeight:'bold'}} className='fs-3'>Successful projects</p>
+          <h2 className='text-light' style={{fontSize:'40px',textAlign:'center'}}><AnimatedCounter value={175}/><span className='text-danger'>+</span></h2>
+          <p style={{fontWeight:'bold'}} className='fs-3 text-light '>Successful projects</p>
         </div>
         <div className='statistic-card'>
-          <h2 style={{fontSize:'40px',textAlign:'center'}}><AnimatedCounter value={8}/><span className='text-danger'>+</span></h2>
-          <p style={{fontWeight:'bold'}} className='fs-3'>Years of experience</p>
+          <h2 className='text-light' style={{fontSize:'40px',textAlign:'center'}}><AnimatedCounter value={8}/><span className='text-danger'>+</span></h2>
+          <p style={{fontWeight:'bold'}} className='fs-3 text-light'>Years of experience</p>
         </div>
         <div className='statistic-card'>
-          <h2 style={{fontSize:'40px',textAlign:'center'}}><AnimatedCounter value={32}/><span className='text-danger'>+</span></h2>
-          <p style={{fontWeight:'bold'}} className='fs-3'>Proffesionals Team</p>
+          <h2 className='text-light' style={{fontSize:'40px',textAlign:'center'}}><AnimatedCounter value={32}/><span className='text-danger'>+</span></h2>
+          <p style={{fontWeight:'bold'}} className='fs-3 text-light'>Proffesionals Team</p>
         </div>
       </div>
       <div className='homepage-project-samples'>
@@ -107,11 +107,11 @@ function Homescreen() {
         </div>
       </div>
       <div className='website-design-packages'>
-      <h2 style={{textAlign:'center',fontSize:'30px'}}>Website design <span className='text-danger'>Packages</span></h2>
-      <p style={{textAlign:'center',margin:'20px',fontSize:'20px'}}>We offer a few standard packages as well as custom projects.Our web design company specialises in 
+      <h2 className='text-light' style={{textAlign:'center',fontSize:'30px'}}>Website design <span className='text-danger'>Packages</span></h2>
+      <p className='text-light' style={{textAlign:'center',margin:'20px',fontSize:'20px'}}>We offer a few standard packages as well as custom projects.Our web design company specialises in 
         the proffessional creation of unique sites.
       </p>
-      <div className='overall-design-packages-card'>
+      <div className='overall-design-packages-card card'>
       <div className='landing-page-card'>
         <h3 style={{textAlign:'center'}}>Landing page</h3>
         <p style={{fontSize:'20px,',textAlign:'center'}}>KSH 10,000-20,000</p>
@@ -122,7 +122,7 @@ function Homescreen() {
         </ul>
 
 </div>
-<div className='landing-page-card'>
+<div className='landing-page-card card'>
         <h3 style={{textAlign:'center'}}>Small business website</h3>
         <p style={{fontSize:'20px,',textAlign:'center'}}>KSH 20,000-30,000</p>
         <ul style={{padding:'30px'}} className='list-unstyled services-li'>
@@ -133,7 +133,7 @@ function Homescreen() {
         </ul>
 
 </div>
-<div className='landing-page-card'>
+<div className='landing-page-card card'>
         <h3 style={{textAlign:'center'}}>One pager website</h3>
         <p style={{fontSize:'20px,',textAlign:'center'}}>KSH 35,000-70,000</p>
         <ul style={{padding:'30px'}} className='list-unstyled services-li'>
@@ -145,7 +145,7 @@ function Homescreen() {
         </ul>
 
 </div>
-<div className='landing-page-card'>
+<div className='landing-page-card card'>
         <h3 style={{textAlign:'center'}}>Corporate Website</h3>
         <p style={{fontSize:'20px,',textAlign:'center'}}>KSH 45,000-90,000</p>
         <ul style={{padding:'30px'}} className='list-unstyled services-li'>
