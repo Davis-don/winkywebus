@@ -13,6 +13,7 @@ import machines from '../Images/lee-campbell-DtDlVpy-vvQ-unsplash.jpg'
 import happywoman from '../Images/pexels-wundef-4212959.jpg'
 import AutoplayVideo from '../Components/Autoplayvideo';
 import AnimatedCounter from '../Components/Animatedcounter';
+import video1 from '../videos/3141208-uhd_3840_2160_25fps.mp4'
 
 
 const images = [
@@ -24,16 +25,10 @@ const images = [
 ];
 
 function Homescreen() {
-  
+
   return (
     <div className='overall-homepage-container'>
-      {/* <div className='homapage-top-contact-section'>
-       <ul>
-        <li className='text-light'>+254758420860</li>
-        <li className='text-light'>info@gmail.com</li>
-        <li className='text-light'>Follow us</li>
-       </ul>
-      </div> */}
+     
       <div className='homepage-bottom-nav-links-section'>
           <div className='top-nav-section'>
             <div className='nav-left-section'>
@@ -53,22 +48,13 @@ function Homescreen() {
       </div>
       <div className='homepage-body-section'>
         <div className='homepage-intro-section-imaged'>
-         
-       <img className='intro-homepage-image' src={timerimage}/>
-       <div className='actual-home-slide'>
-{/* <ImageSlideshow className='intro-homepage-image-slideshow' images={images} /> */}
+          <div className='homepage-video-homescreen'>
+       <AutoplayVideo/>
        </div>
-        
-        
-         <div className='on-image-content'> <img className='intro-homepage-image' src={timerimage} alt='image of a watch'/>
-        <div className='top-vertical-bar'></div>
-        <div className='homepage-intro-section'>
-          <p className='fs-1 text-light'>Crafting Innovative Web Solutions</p>
-        </div>
-        <div className='readmore-btn-holder'>
-          <button className='btn  btn-outline-danger text-light'>Readmore</button>
-        </div>
-        </div>
+       <div className='on-vid-content'>
+        <h2 className='text-light describe-text'>Imagine. Build. Launch</h2>
+        <p className='text-light'>The latest best designs in market</p>
+       </div>
       </div>
       <div className='homepage-content-section'>
            <div className='actual-homepage-content-section'>

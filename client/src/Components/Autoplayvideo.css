@@ -1,0 +1,13 @@
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+.autoplay-component{
+width: 100vw;
+height: 80vh;
+background-color: green;
+}
+.autoplay-video-actual{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+}

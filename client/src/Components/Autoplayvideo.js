@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
-import video1 from '../videos/3141208-uhd_3840_2160_25fps.mp4';
+import video1 from '../videos/0702.mp4';
+import './Autoplayvideo.css'
 
 const AutoplayVideo = () => {
   const videoRef = useRef(null);
@@ -23,10 +24,14 @@ const AutoplayVideo = () => {
   }, [video1]);
 
   return (
-    <video ref={videoRef} src={video1} muted playsInline>
+    <div className='autoplay-component'>
+    <video  className='autoplay-video-actual' ref={videoRef} src={video1} muted playsInline>
       Your browser does not support the video tag.
     </video>
+    </div>
   );
 };
 
 export default AutoplayVideo;
+
+
