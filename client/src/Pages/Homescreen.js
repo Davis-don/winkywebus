@@ -14,6 +14,7 @@ import happywoman from '../Images/pexels-wundef-4212959.jpg'
 import AutoplayVideo from '../Components/Autoplayvideo';
 import AnimatedCounter from '../Components/Animatedcounter';
 import video1 from '../videos/3141208-uhd_3840_2160_25fps.mp4'
+import Footercomponent from '../Components/Footercomponent';
 
 
 const images = [
@@ -122,14 +123,14 @@ function Homescreen() {
         </ul>
 
 </div>
-<div className='landing-page-card card'>
-        <h3 style={{textAlign:'center'}}>Small business website</h3>
-        <p style={{fontSize:'20px,',textAlign:'center'}}>KSH 20,000-30,000</p>
+<div className='landing-page-card card bg-dark'>
+        <h3 className='text-light' style={{textAlign:'center'}}>Small business website</h3>
+        <p className='text-light' style={{fontSize:'20px,',textAlign:'center'}}>KSH 20,000-30,000</p>
         <ul style={{padding:'30px'}} className='list-unstyled services-li'>
-          <li><span><FaCheck className='text-success'/><span></span></span>Several pages</li>
-          <li><span><FaCheck className='text-success'/><span></span></span>Social Media Integration</li>
-          <li><span><FaCheck className='text-success'/><span></span></span>Google My Business Page</li>
-          <li><span><FaCheck className='text-success'/><span></span></span>Google Analytics</li>
+          <li  className='text-light'><span><FaCheck className='text-success'/><span></span></span>Several pages</li>
+          <li className='text-light' ><span><FaCheck className='text-success'/><span></span></span>Social Media Integration</li>
+          <li className='text-light'><span><FaCheck className='text-success'/><span></span></span>Google My Business Page</li>
+          <li className='text-light'><span><FaCheck className='text-success'/><span></span></span>Google Analytics</li>
         </ul>
 
 </div>
@@ -145,15 +146,15 @@ function Homescreen() {
         </ul>
 
 </div>
-<div className='landing-page-card card'>
-        <h3 style={{textAlign:'center'}}>Corporate Website</h3>
-        <p style={{fontSize:'20px,',textAlign:'center'}}>KSH 45,000-90,000</p>
+<div className='landing-page-card card bg-secondary'>
+        <h3 className='text-light' style={{textAlign:'center'}}>Corporate Website</h3>
+        <p className='text-light' style={{fontSize:'20px,',textAlign:'center'}}>KSH 45,000-90,000</p>
         <ul style={{padding:'30px'}} className='list-unstyled services-li'>
-          <li><span><FaCheck className='text-success'/><span></span></span>Advanced functionality</li>
-          <li><span><FaCheck className='text-success'/><span></span></span>Unlimited Subpages</li>
-          <li><span><FaCheck className='text-success'/><span></span></span>Bespoke design</li>
-          <li><span><FaCheck className='text-success'/><span></span></span>Database Population</li>
-          <li><span><FaCheck className='text-success'/><span></span></span>CRM Integration</li>
+          <li className='text-light'><span><FaCheck className='text-success'/><span></span></span>Advanced functionality</li>
+          <li className='text-light'><span><FaCheck className='text-success'/><span></span></span>Unlimited Subpages</li>
+          <li className='text-light'><span><FaCheck className='text-success'/><span></span></span>Bespoke design</li>
+          <li className='text-light'><span><FaCheck className='text-success'/><span></span></span>Database Population</li>
+          <li className='text-light'><span><FaCheck className='text-success'/><span></span></span>CRM Integration</li>
         </ul>
 
 </div>
@@ -164,8 +165,8 @@ function Homescreen() {
     
       </div>
       <div className='homepage-footer-section'>
-
-      <div className='contact-section-homepage-footer'>
+      <Footercomponent/>
+      {/* <div className='contact-section-homepage-footer'>
           <div  className='contact-homepage-image-footer'>
      <img className='contact-footer-diagram' src={happywoman} alt='happy woman'/>
           </div>
@@ -201,7 +202,7 @@ function Homescreen() {
        <div className='copyright-div'>
         <p style={{color:'grey',textAlign:'center'}} className='container-fluid'>copyright <span><FaRegCopyright /></span>2024 All rights reserved.Developed by winkywebus team. </p>
        </div>
-        </div>
+        </div> */}
        
       </div>
       </div>                                    

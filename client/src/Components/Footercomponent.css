@@ -1,0 +1,40 @@
+.overall-footer-component{
+padding: 20px;
+}
+.contact-us-section{
+width: 90vw;
+margin: auto;
+}
+.top-contact-us-section{
+
+}
+.overall-icons-containers-contact{
+/* display: flex;
+flex-direction: row;
+gap:20px;
+width: max-content;
+margin: auto; */
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+gap:10px;
+}
+
+.actual-icon{
+width: max-content;
+height: max-content;
+padding: 15px;
+}
+.contact-info-container{
+line-height: 15px;
+color: white;
+font-size: small;
+}
+.submit-btn-holder{
+width: max-content;
+margin: auto;
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    gap:20px
+}
