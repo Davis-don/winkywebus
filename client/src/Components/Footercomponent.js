@@ -24,7 +24,7 @@ function Footercomponent() {
   let handlepost = async (e)=>{
     e.preventDefault();
 try{
-const response= await fetch ('http://localhost:4000/',{
+const response= await fetch ('https://winkywebus-server.vercel.app',{
 method:'post',
 headers:{
     "content-type":'application/json'
