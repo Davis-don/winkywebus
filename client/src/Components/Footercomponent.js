@@ -28,7 +28,7 @@ function Footercomponent() {
 
     try {
         const response = await fetch('https://project-awesome.vercel.app', {
-            method: 'POST',
+            method: 'post',
             headers: {
                 'Content-Type': 'application/json',
             },
