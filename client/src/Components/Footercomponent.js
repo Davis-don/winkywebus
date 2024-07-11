@@ -113,7 +113,7 @@ function Footercomponent() {
         </div>
         <div className='bottom-contact-us-section'>
       <h3 style={{textAlign:'center'}} className='text-light'>Get in Touch</h3>
-      <form className='contact-form'onSubmit={handlepost}>
+      <form className='contact-form'onSubmit={handlePost}>
         <input onChange={handleUpdate} name='name' type='text' className='form-control' placeholder='Name'/>
         <input onChange={handleUpdate} name='email' type='Email' className='form-control' placeholder='Email'/>
         <input onChange={handleUpdate} name='contact' type='number' className='form-control' placeholder='number'/>
