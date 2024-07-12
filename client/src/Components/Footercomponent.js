@@ -16,10 +16,9 @@ function Footercomponent() {
   })
   const handleUpdate = (e) => {
     setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
+      ...formData,[e.target.name]: e.target.value
     });
-    console.log(formData);
+    
   };
 
 
@@ -27,7 +26,7 @@ function Footercomponent() {
     e.preventDefault();
 
     try {
-        const response = await fetch('https://project-awesome.vercel.app', {
+        const response = await fetch('https://winkywebus-server.vercel.app', {
             method: 'post',
             headers: {
                 'Content-Type': 'application/json',
