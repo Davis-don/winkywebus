@@ -1,0 +1,86 @@
+//Initialise Server
+//create clients table
+GET http://localhost:4000/Server/initialise/
+
+###
+//refreshes server fully
+GET http://localhost:4000/Server/initialise/drop
+
+//test email
+
+###
+GET http://localhost:4000/Register/Email
+
+###
+# POST Request Example
+###
+
+POST http://localhost:4000/Register/Email
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "johndoe@example.com",
+  "contact": "1234567890",
+  "subject": "Example Subject",
+  "message": "Hello, this is a test message."
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###
+//create Account
+POST http://localhost:4000/Create/Account/
+Content-Type: application/json
+
+{
+    "firstName":"Davis",
+    "lastName":"Ikou",
+    "phoneNumber":"0791704196",
+    "Email":"anisianjanja@gmail.com",
+    "password":"As261/1163/2020",
+    "confirmPassword":"As261/1163/2020"
+}
+
+###
+//login into the account
+
+POST http://localhost:4000/Client/Login/Account/
+Content-Type: application/json
+
+# {
+#     "email":"39257524",
+#     "password":"As261/1163/2020"
+# }
+
+{
+    "email":"davismugoikou@gmail.com",
+    "password":"0000000000"
+}
+
+###
+GET http://localhost:4000/Client/Login/Account/authenticated
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ5aThleDN4IiwiZW1haWwiOiJhbmlzaWFuamFuamFAZ21haWwuY29tIiwiaWF0IjoxNzE0MDY1NjM3LCJleHAiOjE3MTQwNjkyMzd9.Xp7-qF-xcIj2fBGMc3jxV8YIEIV3YQ8kFIHT0we4qwA
+###
+POST  http://localhost:4000/Register/task
+Content-Type: application/json
+
+{
+    "clientId":"13454730",
+    "service":"Personal Portfolio",
+    "TaskDescription":"I want a full stack application"
+
+}
+###
+GET http://localhost:4000/Register/task

@@ -26,7 +26,7 @@ function Footercomponent() {
     e.preventDefault();
 
     try {
-        const response = await fetch('https://winkywebus-server.vercel.app', {
+        const response = await fetch('https://winkywebus-server.vercel.app/Register/Email', {
             method: 'post',
             headers: {
                 'Content-Type': 'application/json',

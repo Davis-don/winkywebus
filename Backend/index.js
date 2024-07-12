@@ -17,57 +17,61 @@ const corsOptions = {
   };
   app.use(cors(corsOptions));
 
+  const initialise=require('./Start')
+  app.use('/Server/initialise',initialise);
+  const Emailreg=require('./EmailsHandler');
+  app.use('/Register/Email',Emailreg)
 
 
-const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: '465',
-  secure: true, // Set to false when using port 587
-  auth: {
-    user:  process.env.EMAIL,
-    pass: process.env.APP_PASSWORD
-  },
-  tls: {
-    rejectUnauthorized: false
-  }
-});
+// const transporter = nodemailer.createTransport({
+//   host: 'smtp.gmail.com',
+//   port: '465',
+//   secure: true, // Set to false when using port 587
+//   auth: {
+//     user:  process.env.EMAIL,
+//     pass: process.env.APP_PASSWORD
+//   },
+//   tls: {
+//     rejectUnauthorized: false
+//   }
+// });
 
                 
 
-app.get('/',(req,res)=>{
-    res.send('server is running')
-})
-app.post('/',(req,res)=>{
+// app.get('/',(req,res)=>{
+//     res.send('server is running')
+// })
+// app.post('/',(req,res)=>{
   
-    const {name,email,contact,subject,message}=req.body
+//     const {name,email,contact,subject,message}=req.body
 
-    const TextMessage=
+//     const TextMessage=
     
-    `From:Winkywebus App
-    Name: ${name}
-    Email: ${email}
-    PhoneNumber:${contact}
-    Subject:${subject}
-    Message: ${message}
-    `
+//     `From:Winkywebus App
+//     Name: ${name}
+//     Email: ${email}
+//     PhoneNumber:${contact}
+//     Subject:${subject}
+//     Message: ${message}
+//     `
 
-    const mailOptions = {
-        from: email,
-        to: process.env.EMAIL,
-        subject: 'Mail from your portfolio',
-        text: TextMessage
-      };
+//     const mailOptions = {
+//         from: email,
+//         to: process.env.EMAIL,
+//         subject: 'Mail from your portfolio',
+//         text: TextMessage
+//       };
 
 
-      transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-          //return res.status(500).send(error.toString());
-          console.log(error)
-        }
-        //res.status(200).send('Email sent: ' + info.response);
-        res.status(200).json({message:'email sent successfully'})
-      });
-    });
+//       transporter.sendMail(mailOptions, (error, info) => {
+//         if (error) {
+//           //return res.status(500).send(error.toString());
+//           console.log(error)
+//         }
+//         //res.status(200).send('Email sent: ' + info.response);
+//         res.status(200).json({message:'email sent successfully'})
+//       });
+//     });
     
    
      
