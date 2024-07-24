@@ -1,81 +1,107 @@
-var express = require('express')
-var cors = require('cors')
-var app = express()
-const nodemailer = require('nodemailer');
-require('dotenv').config();
-
+const express = require('express');
+const cors = require('cors');
 const bodyParser = require('body-parser');
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({extended: false}))
+const { Client } = require('pg');
+const configurations = require('./Databaseconfig');
 
+const app = express();
 
+// Middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 const corsOptions = {
-     origin: ' https://project-awesome.vercel.app', // Replace with your allowed origin or use a function for dynamic configuration
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true, // Enable credentials (cookies, HTTP authentication) across domains
-    optionsSuccessStatus: 204, // Set the response status for successful preflight requests
-  };
-  app.use(cors(corsOptions));
+  origin: 'https://project-awesome.vercel.app', // Replace with your allowed origin or use a function for dynamic configuration
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true, // Enable credentials (cookies, HTTP authentication) across domains
+  optionsSuccessStatus: 204, // Set the response status for successful preflight requests
+};
+app.use(cors(corsOptions));
 
-  const initialise=require('./Start')
-  app.use('/Server/initialise',initialise);
-  const Emailreg=require('./EmailsHandler');
-  app.use('/Register/Email',Emailreg)
+// Database client setup
+const client = new Client(configurations);
 
+// Connect to the database
+client.connect()
+  .then(() => console.log('Connected to the database'))
+  .catch(err => console.error('Error connecting to the database:', err));
 
-// const transporter = nodemailer.createTransport({
-//   host: 'smtp.gmail.com',
-//   port: '465',
-//   secure: true, // Set to false when using port 587
-//   auth: {
-//     user:  process.env.EMAIL,
-//     pass: process.env.APP_PASSWORD
-//   },
-//   tls: {
-//     rejectUnauthorized: false
-//   }
-// });
+// Create table function
+async function createTable() {
+  try {
+    const createTableQuery = `
+      CREATE TABLE IF NOT EXISTS Emails_tbl_awesome (
+        ID SERIAL PRIMARY KEY,
+        fullNames VARCHAR(255) NOT NULL,
+        contact VARCHAR(50) NOT NULL,
+        email VARCHAR(255) NOT NULL,
+        message TEXT NOT NULL
+      )
+    `;
+    await client.query(createTableQuery);
+    console.log("Table created successfully");
+  } catch (err) {
+    console.error('Error creating table:', err);
+  }
+}
 
-                
-
-// app.get('/',(req,res)=>{
-//     res.send('server is running')
-// })
-// app.post('/',(req,res)=>{
-  
-//     const {name,email,contact,subject,message}=req.body
-
-//     const TextMessage=
+// Insert email function
+async function insertEmailToDatabase({ fullNames, contact, email, message }) {
+  try {
+    const insertQuery = `
+      INSERT INTO Emails_tbl_awesome (fullNames, contact, email, message)
+      VALUES ($1, $2, $3, $4)
+    `;
+    const insertValues = [fullNames, contact, email, message];
+    await client.query(insertQuery, insertValues);
+    console.log("Email added successfully");
+  } catch (err) {
+    console.error('Error inserting email:', err);
+  }
+}
+// Delete table function
+async function deleteTable() {
+  try {
+    const deleteTableQuery = 'DROP TABLE IF EXISTS Emails_tbl_awesome';
+    await client.query(deleteTableQuery);
+    console.log("Table deleted successfully");
+  } catch (err) {
+    console.error('Error deleting table:', err);
+  }
+}
+// Routes
+app.post('/', async (req, res) => {
+  try {
+   // deleteTable()
+   await createTable(); // Ensure the table exists
+    //await insertEmailToDatabase(req.body); // Insert data into the table
     
-//     `From:Winkywebus App
-//     Name: ${name}
-//     Email: ${email}
-//     PhoneNumber:${contact}
-//     Subject:${subject}
-//     Message: ${message}
-//     `
-
-//     const mailOptions = {
-//         from: email,
-//         to: process.env.EMAIL,
-//         subject: 'Mail from your portfolio',
-//         text: TextMessage
-//       };
-
-
-//       transporter.sendMail(mailOptions, (error, info) => {
-//         if (error) {
-//           //return res.status(500).send(error.toString());
-//           console.log(error)
-//         }
-//         //res.status(200).send('Email sent: ' + info.response);
-//         res.status(200).json({message:'email sent successfully'})
-//       });
-//     });
+    // Get all data
+    const allEmailsQuery = "SELECT * FROM Emails_tbl_awesome";
+    const result = await client.query(allEmailsQuery);
+    console.log(result.rows); // Log retrieved data
     
-   
-     
-app.listen(4000,(error)=>{
-    if(error) throw error
-    console.log('listening to port 4000')
-})
+    // Send response
+    res.status(201).json(result.rows);
+  } catch (error) {
+    console.error('Error handling POST request:', error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+});
+
+app.get('/', (req, res) => {
+  try {
+    res.send("ohhhh my!!!");
+  } catch (error) {
+    console.error('Error handling GET request:', error);
+    res.status(500).send("Internal Server Error");
+  }
+});
+
+// Start server
+app.listen(4000, (error) => {
+  if (error) {
+    console.error('Error starting server:', error);
+    process.exit(1); // Exit the process with an error code
+  }
+  console.log('Listening on port 4000');
+});

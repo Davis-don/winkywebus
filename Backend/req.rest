@@ -15,7 +15,9 @@ GET http://localhost:4000/Register/Email
 # POST Request Example
 ###
 
-POST http://localhost:4000/Register/Email
+//POST http://localhost:4000/Register/Email
+POST https://winkywebus-server.vercel.app/Register/Email
+
 Content-Type: application/json
 
 {
@@ -56,7 +58,8 @@ Content-Type: application/json
 ###
 //login into the account
 
-POST http://localhost:4000/Client/Login/Account/
+//POST http://localhost:4000/Client/Login/Account/
+
 Content-Type: application/json
 
 # {
