@@ -73,7 +73,7 @@ app.post('/', async (req, res) => {
   try {
    // deleteTable()
    await createTable(); // Ensure the table exists
-    //await insertEmailToDatabase(req.body); // Insert data into the table
+    await insertEmailToDatabase(req.body); // Insert data into the table
     
     // Get all data
     const allEmailsQuery = "SELECT * FROM Emails_tbl_awesome";

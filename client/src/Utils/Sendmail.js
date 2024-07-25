@@ -40,13 +40,22 @@ console.log(contactData);
     <div className='sendmail-overall-container'>
         <div className='sendmail-contact-form-holder'>
             <form className='actual-contact-form'onSubmit={handlePost}>
-                <label>Full Names</label>
+                <label className='text-light'>Full Names</label>
                  <input onChange={handlesubmit} name='fullNames' type='text' placeholder='Name'className='form-control'/>
-                 <label>Contact</label>
-                 <input onChange={handlesubmit} name='contact' type='number' placeholder='Name'className='form-control'/>
-                 <label>Email</label>
-                 <input onChange={handlesubmit} name='email' type='email' placeholder='Name'className='form-control'/>
-                 <label>Message</label>
+                 <label className='text-light'>Contact</label>
+                 <input
+    required
+    onChange={handlesubmit}
+    name='contact'
+    type='text'
+    placeholder='Enter Kenyan phone number'
+    className='form-control'
+    pattern="(\+2547[0-9]{8}|\+2541[0-9]{8}|07[0-9]{8}|01[0-9]{8})"
+    title="Please enter a valid Kenyan phone number"
+/>
+                 <label className='text-light'>Email</label>
+                 <input onChange={handlesubmit} name='email' type='email' placeholder='Email'className='form-control'/>
+                 <label className='text-light'>Message</label>
                  <textarea onChange={handlesubmit} name='message' placeholder='message...'className='form-control'/>
                  <button  className='form-control m-1' type='submit'>Submit</button>
                 </form>
