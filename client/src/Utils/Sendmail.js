@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { useState } from 'react'
 
 function Sendmail() {
+    const [successful, Setsuccess]=useState(false);
+    const [form,setForm]=useState(true)
  const [contactData,setContactData]=useState({
     fullNames:"",
     contact:"",
@@ -29,8 +31,13 @@ console.log(contactData);
     if (!response.ok) {
         throw new Error('Network response was not ok');
     }
-    alert('success');
-    // Further actions with data if needed
+    Setsuccess(true);
+    setForm(false);
+
+    setTimeout(() => {
+        Setsuccess(false);
+        setForm(true);  
+    }, 2000);
     }
     catch (error){
     console.log(error)
@@ -39,7 +46,10 @@ console.log(contactData);
   return (
     <div className='sendmail-overall-container'>
         <div className='sendmail-contact-form-holder'>
-            <form className='actual-contact-form'onSubmit={handlePost}>
+        {successful && <div class="alert alert-success">
+  <strong>Success!</strong> message sent
+</div>}
+{form && <form className='actual-contact-form'onSubmit={handlePost}>
                 <label className='text-light'>Full Names</label>
                  <input onChange={handlesubmit} name='fullNames' type='text' placeholder='Name'className='form-control'/>
                  <label className='text-light'>Contact</label>
@@ -58,7 +68,7 @@ console.log(contactData);
                  <label className='text-light'>Message</label>
                  <textarea onChange={handlesubmit} name='message' placeholder='message...'className='form-control'/>
                  <button  className='form-control m-1' type='submit'>Submit</button>
-                </form>
+                </form>}
         </div>
         </div>
   )
