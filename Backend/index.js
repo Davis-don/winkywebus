@@ -78,7 +78,6 @@ app.post('/', async (req, res) => {
     // Get all data
     const allEmailsQuery = "SELECT * FROM Emails_tbl_awesome";
     const result = await client.query(allEmailsQuery);
-    console.log(result.rows); // Log retrieved data
     
     // Send response
     res.status(201).json(result.rows);

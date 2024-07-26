@@ -16,7 +16,7 @@ function Sendmail() {
 setContactData({
     ...contactData,[e.target.name]:e.target.value
 });
-console.log(contactData);
+
     }
     const handlePost=async (e)=>{
         e.preventDefault();
