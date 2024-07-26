@@ -73,14 +73,15 @@ app.post('/', async (req, res) => {
   try {
    // deleteTable()
    await createTable(); // Ensure the table exists
-    await insertEmailToDatabase(req.body); // Insert data into the table
+    //await insertEmailToDatabase(req.body); // Insert data into the table
     
     // Get all data
-    const allEmailsQuery = "SELECT * FROM Emails_tbl_awesome";
-    const result = await client.query(allEmailsQuery);
+    //const allEmailsQuery = "SELECT * FROM Emails_tbl_awesome";
+    //const result = await client.query(allEmailsQuery);
     
     // Send response
-    res.status(201).json(result.rows);
+    res.status(201)
+    //res.status(201).json(result.rows);
   } catch (error) {
     console.error('Error handling POST request:', error);
     res.status(500).json({ message: "Internal Server Error" });
