@@ -77,7 +77,7 @@ app.post('/', async (req, res) => {
     // Optionally uncomment deleteTable() if you want to reset the table on each request
     // await deleteTable();
     await createTable(); // Ensure the table exists
-    await insertEmailToDatabase(req.body); // Insert data into the table
+    //await insertEmailToDatabase(req.body); // Insert data into the table
     
     // Get all data
     const allEmailsQuery = "SELECT * FROM Emails_tbl_awesome";
