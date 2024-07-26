@@ -21,7 +21,7 @@ setContactData({
     const handlePost=async (e)=>{
         e.preventDefault();
     try{
-        const response= await fetch ('https://winkywebus-server.vercel.app',{
+        const response= await fetch ('https://test-server-five-pink.vercel.app',{
         method:'post',
         headers:{
             'content-type':'application/json'
